@@ -18,8 +18,18 @@ namespace IS_2_20_FahrislamovDV_U
         {
             public static MySqlConnection GetConnection(MySqlConnection mySql)
             {
-               MessageBox.Show("Подключение возвращено");
-               return mySql;
+                try
+                {
+                    MessageBox.Show("Подключение возвращено");
+                    return mySql;
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Подключение не найдено"+ex.Message);
+                    return null;
+                }
+               
             }
         }
         public Task2()

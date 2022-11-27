@@ -28,5 +28,11 @@ namespace IS_2_20_FahrislamovDV_U
             Form form = new Task2();
             form.ShowDialog();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Form form = new Task3();
+            form.ShowDialog();
+        }
     }
 }
