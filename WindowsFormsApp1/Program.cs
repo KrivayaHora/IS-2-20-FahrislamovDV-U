@@ -1,16 +1,13 @@
-﻿using MySql.Data.MySqlClient;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IS_2_20_FahrislamovDV_U
+namespace WindowsFormsApp1
 {
-    
     internal static class Program
     {
-        
         /// <summary>
         /// Главная точка входа для приложения.
         /// </summary>
@@ -19,7 +16,7 @@ namespace IS_2_20_FahrislamovDV_U
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Menu());
+            Application.Run(new Form1());
         }
     }
 }
