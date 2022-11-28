@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{7681883C-A300-41AF-AA94-D9F60661427A}</ProjectGuid>
+    <ProjectGuid>{C43C1B7C-1082-4284-9243-1738E215C257}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>IS_2_20_FahrislamovDV_U</RootNamespace>
-    <AssemblyName>IS-2-20-FahrislamovDV-U</AssemblyName>
+    <RootNamespace>Tasking5</RootNamespace>
+    <AssemblyName>Tasking5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -84,17 +84,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Menu.cs">
+    <Compile Include="Task5.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.cs">
-      <DependentUpon>Menu.cs</DependentUpon>
+    <Compile Include="Task5.Designer.cs">
+      <DependentUpon>Task5.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Menu.resx">
-      <DependentUpon>Menu.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -104,6 +101,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Task5.resx">
+      <DependentUpon>Task5.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -119,25 +119,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Tasking1\Tasking1.csproj">
-      <Project>{74b01111-6949-4457-813f-06c6a39065ae}</Project>
-      <Name>Tasking1</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tasking2\Tasking2.csproj">
-      <Project>{39f88df0-8ff1-45be-8610-e3a32b20d6ac}</Project>
-      <Name>Tasking2</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tasking3\Tasking3.csproj">
-      <Project>{f420f464-9a0a-4e2c-8c2b-1bc4f7ec59bb}</Project>
-      <Name>Tasking3</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tasking4\Tasking4.csproj">
-      <Project>{027758ce-9a1d-4c8c-94c7-49403276118f}</Project>
-      <Name>Tasking4</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Tasking5\Tasking5.csproj">
-      <Project>{C43C1B7C-1082-4284-9243-1738E215C257}</Project>
-      <Name>Tasking5</Name>
+    <ProjectReference Include="..\ConnectDB\ConnectDB.csproj">
+      <Project>{f9ede7a4-9f2d-4a7b-bedd-c2e71f3f5886}</Project>
+      <Name>ConnectDB</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

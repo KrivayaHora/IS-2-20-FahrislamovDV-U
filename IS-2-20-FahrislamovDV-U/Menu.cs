@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using Tasking5;
 
 namespace IS_2_20_FahrislamovDV_U
 {
@@ -32,6 +32,12 @@ namespace IS_2_20_FahrislamovDV_U
         private void button4_Click(object sender, EventArgs e)
         {
             Form form = new Task4();
+            form.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Form form = new Task5();
             form.ShowDialog();
         }
     }
