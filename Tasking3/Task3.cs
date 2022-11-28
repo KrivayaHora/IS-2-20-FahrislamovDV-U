@@ -2,12 +2,14 @@
 using System.Data;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
+using Tasking3;
 
 namespace IS_2_20_FahrislamovDV_U
 {
     public partial class Task3 : Form
     {
         MySqlConnection Connection;
+        ConnectDB Connect = new ConnectDB("server=chuc.caseum.ru;port=33333;username=st_2_20_24;password=54843478;database=is_2_20_st24_KURS");
         MySqlDataAdapter MyDA = new MySqlDataAdapter();
         BindingSource BindingS = new BindingSource();
         DataTable DT = new DataTable();
@@ -65,7 +67,7 @@ namespace IS_2_20_FahrislamovDV_U
         
         private void Task3_Load(object sender, EventArgs e)
         {
-            Connection = new MySqlConnection("server=chuc.caseum.ru;port=33333;username=st_2_20_24;password=54843478;database=is_2_20_st24_KURS");
+            Connection = Connect.Connection();
             GetCPU();
         }
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)

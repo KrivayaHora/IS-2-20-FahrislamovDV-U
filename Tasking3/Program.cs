@@ -9,11 +9,23 @@ using MySql.Data.MySqlClient;
 
 namespace Tasking3
 {
-    class ConnectDB
+    public class ConnectDB
     {
-        public static MySqlConnection GetConnection(MySqlConnection mySql)
+        string strConnect;
+        MySqlConnection Conn;
+
+        public MySqlConnection Connection()
         {
-            return mySql;
+            Conn = new MySqlConnection(strConnect);
+            return Conn;
+        }
+        public string ReturnConn()
+        {
+            return strConnect;
+        }
+        public ConnectDB(string connect)
+        {
+            strConnect = connect;
         }
     }
     internal static class Program
